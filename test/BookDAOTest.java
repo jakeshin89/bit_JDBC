@@ -1,13 +1,14 @@
 package test;
 
-import dao.BookDao;
+import dao.UsersDAO;
 import vo.BookVO;
 
 public class BookDAOTest {
 
 	public static void main(String[] args) {
 		
-		BookDao book = new BookDao();
+		UsersDAO book = new UsersDAO(); //메소드
+		
 		BookVO d = new BookVO();
 		
 		//Insert 수행
@@ -15,6 +16,7 @@ public class BookDAOTest {
 		d.setBookname("Java");
 		d.setPublisher("Infinity");
 		d.setPrice(30000);
+		
 		int count = book.insertBook(d);
 		
 		System.out.println(count+"번 insert 수행하였습니다.");
@@ -40,9 +42,6 @@ public class BookDAOTest {
 		
 		book.getBookRec().forEach(i -> System.out.println(i));
 		System.out.println();
-		
-		book.searchPublisher("bit");
-		
 		
 	}
 }

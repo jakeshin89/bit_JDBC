@@ -6,7 +6,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import dao.BookDao;
+import dao.UsersDAO;
 import service.BookService;
 import service.BookServiceImpl;
 import vo.BookVO;
@@ -21,7 +21,7 @@ public class Test11_BookService {
 	public void setUp() {
 		System.out.println("setUp() ผ๖วเ");
 		
-		BookDao dao = new BookDao();
+		UsersDAO dao = new UsersDAO();
 		service = new BookServiceImpl(dao);
 	}
 	

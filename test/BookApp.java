@@ -11,7 +11,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 
-import dao.BookDao;
+import dao.UsersDAO;
 import service.BookService;
 import service.BookServiceImpl;
 import vo.BookVO;
@@ -28,7 +28,7 @@ class Gui extends JFrame{
 	static int num=0;
 	
     BookService service;
-    BookDao dao = new BookDao();
+    UsersDAO dao = new UsersDAO();
     
     JButton add, list, delete, search, exit;
     TextField bookid, bookname, publisher, price;
